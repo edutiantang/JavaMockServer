@@ -1,0 +1,51 @@
+{
+	"id": "92fa2c4e-eae7-6b20-8d92-b1bc584b4aab",
+	"name": "MockServer",
+	"description": "",
+	"order": [
+		"0a988439-e340-afcf-9b5c-64c8ed8c5599"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1503723961059,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0a988439-e340-afcf-9b5c-64c8ed8c5599",
+			"headers": "Content-Type: application/json\nAccessToken: accessToken\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "AccessToken",
+					"value": "accessToken",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://{{host}}:8080/api/{pathVariable}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"name\"] = jsonData.name == \"condon\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1503734650418,
+			"name": "PostRequest",
+			"description": "http://{{host}}:8080/hello/{id}",
+			"collectionId": "92fa2c4e-eae7-6b20-8d92-b1bc584b4aab",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"condon\"\n}"
+		}
+	]
+}
